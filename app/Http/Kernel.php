@@ -2,7 +2,6 @@
 
 namespace App\Http;
 
-use App\Http\Middleware\ActivationCheckMiddleware;
 use App\Http\Middleware\InstallationMiddleware;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -72,7 +71,6 @@ class Kernel extends HttpKernel
         'dm.api' => \App\Http\Middleware\DmTokenIsValid::class,
         'module' => \App\Http\Middleware\ModulePermissionMiddleware::class,
         'installation-check' => InstallationMiddleware::class,
-        'actch' => ActivationCheckMiddleware::class,
         'localization' => \App\Http\Middleware\LocalizationMiddleware::class,
         'module-check' => \App\Http\Middleware\ModuleCheckMiddleware::class,
         'current-module' => \App\Http\Middleware\CurrentModule::class,
