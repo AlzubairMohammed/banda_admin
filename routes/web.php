@@ -45,7 +45,8 @@ Route::get('order-invoice/{id}', 'HomeController@order_invoice')->name('order_in
 
 Route::get('login/{tab}', 'LoginController@login')->name('login');
 Route::post('external-login-from-drivemond', 'LoginController@externalLoginFromDrivemond');
-Route::post('login_submit', 'LoginController@submit')->name('login_post')->middleware('actch');
+Route::post('login_submit', 'LoginController@submit')->name('login_post');
+// Route::post('login_submit', 'LoginController@submit')->name('login_post')->middleware('actch');
 Route::get('logout', 'LoginController@logout')->name('logout');
 Route::get('/reload-captcha', 'LoginController@reloadCaptcha')->name('reload-captcha');
 Route::get('/reset-password', 'LoginController@reset_password_request')->name('reset-password');
